@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import styles from "./CssModuleButton.module.css"
+import styles from "./CssModulesButton.module.css"
 
 export default function CssModulesButton({ children, intent = 'primary', invert = false }) {
   return (

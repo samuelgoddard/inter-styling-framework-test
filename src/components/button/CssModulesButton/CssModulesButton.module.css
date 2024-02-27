@@ -1,0 +1,43 @@
+/* Native CSS module variables !! (Absolutely scrumptious!!) */
+/* https://github.com/css-modules/css-modules/blob/master/docs/values-variables.md */
+@value colors: "@/styles/design-tokens/css-modules-colors.css";
+@value black, white, orange from colors;
+
+.btn {
+  display: block;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+
+  /* Native CSS compound selectors (hot! HOT!! HOT!!!!!!!!) */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#compound_selectors */
+  &.primary {
+    background-color: black;
+    color: white;  
+    
+    &:hover, &:focus {
+      background-color: rgb(23 16 14 / 0.6);
+    }
+
+    &.inverted {
+      background-color: white;
+      color: black;
+
+      &:hover, &:focus {
+        background-color: rgb(23 16 14 / 0.6);
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: orange;
+    color: white;
+
+    &:hover, &:focus {
+      background-color: rgb(23 16 14 / 0.6);
+    }
+  }
+}

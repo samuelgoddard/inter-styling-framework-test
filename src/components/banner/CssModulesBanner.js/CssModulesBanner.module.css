@@ -1,0 +1,66 @@
+/* Native CSS module variables !! (Absolutely scrumptious!!) */
+/* https://github.com/css-modules/css-modules/blob/master/docs/values-variables.md */
+@value colors: "@/styles/design-tokens/css-modules-colors.css";
+@value black, white, orange from colors;
+
+.banner {
+  background-color: black;
+  padding: 30vw 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  /* Native CSS nested classes !! (VERY Delicious!!) */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#child_selectors */
+  & .banner__img {
+    /* Don't need to do any weird :global() stuff (HOT!!!) */
+    object-fit: cover;
+  }
+}
+
+.banner__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 83.333%;
+
+  /* Native CSS Nested MQ's !! (Sooooo scrummy! Wow! Much 2024!) */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules */
+  @media (min-width: 768px) { & {
+    width: 58.333%;
+  }}
+
+  @media (min-width: 1024px) { & {
+    width: 50%;
+  }}
+
+  @media (min-width: 1280px) { & {
+    width: 600px;
+  }}
+}
+
+.banner__heading {
+  font-weight: bold;
+  font-size: 8vw;
+  color: white;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 6vw;
+  }
+  
+  @media (min-width: 1024px) {
+    font-size: 5vw;
+  }
+  
+  @media (min-width: 1280px) {
+    font-size: 64px;
+  }
+}

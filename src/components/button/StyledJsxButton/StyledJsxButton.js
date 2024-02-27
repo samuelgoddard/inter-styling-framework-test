@@ -1,13 +1,14 @@
 import cx from 'classnames'
 import css from 'styled-jsx/css'
+import { colors } from '@/styles/design-tokens/styled-jsx-colors'
 
 const getIntentStyles = (intent) => {
   switch (intent) {
     case 'primary':
       return css.resolve`
         .cta-button.primary {
-          background-color: black;
-          color: white;
+          background-color: ${colors.black};
+          color: ${colors.white};
           border-color: transparent;
         }
 
@@ -17,8 +18,8 @@ const getIntentStyles = (intent) => {
         }
 
         .cta-button.primary.inverted {
-          background-color: white;
-          color: black;
+          background-color: ${colors.white};
+          color: ${colors.black};
           border-color: transparent;
         }
 
@@ -30,8 +31,8 @@ const getIntentStyles = (intent) => {
     case 'secondary':
       return css.resolve`
         .cta-button.secondary {
-          background-color: blue;
-          color: white;
+          background-color: ${colors.orange};
+          color: ${colors.white};
           border-color: transparent;
         }
 
@@ -61,7 +62,9 @@ export default function StyledJsxButton({ children, intent = 'primary', invert =
         .cta-button {
           display: block;
           border-radius: 5px;
-          padding: 6px;
+          letter-spacing: -0.025em;
+          font-weight: 700;
+          padding: 6px 12px;
           border: 2px solid transparent;
         }
       `}</style>
