@@ -1,0 +1,35 @@
+.btn {
+  display: block;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.btn.primary {
+  background-color: black;
+  color: white;
+}
+
+.btn.primary.inverted {
+  background-color: white;
+  color: black;
+}
+
+.btn.primary:hover, .btn.primary:focus {
+  background-color: grey;
+}
+
+.btn.secondary {
+  background-color: blue;
+  color: white;
+}
+
+.btn.secondary:hover, .btn.secondary:focus {
+  background-color: grey;
+}
+
+/* Investigate purging this... */
+.btn--random {
+  background-color: green;
+}
